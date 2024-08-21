@@ -1,11 +1,10 @@
 ---
 title: "Plotly Assignment"
+subtitle: "<span style='font-size:22px;'>Please click on the right side of the slide to view the next one.</span>"
 output: ioslides_presentation
 author: lavender-cherimoya
 date: "2024-08-21"
 ---
-
-Please click on the right side of the slide to view the next one.
 
 ## R Code
 The following code uses the ChickWeight database, which contains the weight data in gram of 48 individual chicks during their growth, as a function of time and diet. There are 4 different diets, and the timeframe goes from 0 to 21 days maximum. 
