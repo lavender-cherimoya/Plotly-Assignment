@@ -1,0 +1,32 @@
+---
+title: "Plotly Assignment"
+output: ioslides_presentation
+author: lavender-cherimoya
+date: "2024-08-20"
+---
+
+## R Code
+The following code uses the ChickWeight database, which contains the weight data in gram of 48 individual chicks during their growth, as a function of time and diet. There are 4 different diets, and the timeframe goes from 0 to 21 days maximum. 
+```{r slide1, echo=TRUE, error=FALSE, warning=FALSE, message=FALSE}
+library(plotly)
+library(dplyr)
+
+plot1 <- ggplot(ChickWeight, aes(x = Time, y = weight, 
+                                 color = factor(Chick))) +
+  geom_line() +
+      geom_point(size = 0.5) +  
+  facet_wrap(~Diet) +
+  labs(title = "Chicks growth as a function of their diet and time", 
+       x = "Time [days]", 
+       y = "Weight [g]") +
+      theme(legend.position = "none")
+```
+
+## Chick growth trajectories
+
+The plot below shows individual chick weight growth grouped by diet, with each subplot representing a different diet.
+
+```{r slide2, echo=TRUE, error=FALSE, warning=FALSE, message=FALSE}
+ggplotly(plot1)
+```
+
