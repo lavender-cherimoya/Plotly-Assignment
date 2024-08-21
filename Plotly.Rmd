@@ -1,6 +1,6 @@
 ---
 title: "Plotly Assignment"
-subtitle: "<span style='font-size:22px;'>Please click on the right side of the slide to view the next one.</span>"
+subtitle: "<span style='font-size:22px;'>Please click on the right border of the slide to view the next one.</span>"
 output: ioslides_presentation
 author: lavender-cherimoya
 date: "2024-08-21"
@@ -17,7 +17,7 @@ plot1 <- ggplot(ChickWeight, aes(x = Time, y = weight,
   geom_line() +
       geom_point(size = 0.5) +  
   facet_wrap(~Diet) +
-  labs(title = "Chicks growth as a function of their diet and time", 
+  labs(title = "Chicks growth as a function of diet and time", 
        x = "Time [days]", 
        y = "Weight [g]") +
       theme(legend.position = "none")
@@ -27,7 +27,7 @@ plot1 <- ggplot(ChickWeight, aes(x = Time, y = weight,
 
 The plot below shows individual chick weight growth grouped by diet, with each subplot representing a different diet.
 
-```{r slide2, echo=TRUE, error=FALSE, warning=FALSE, message=FALSE}
+```{r slide2, echo=FALSE, error=FALSE, warning=FALSE, message=FALSE}
 ggplotly(plot1)
 ```
 
